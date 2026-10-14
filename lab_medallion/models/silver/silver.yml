@@ -45,13 +45,17 @@ models:
                 to: ref('stg_users')
                 field: user_id
       - name: quantity
+        description: Number of items ordered, between 1 and 5.
         data_tests:
+          - not_null
           - accepted_values:
               arguments:
                 values: [1, 2, 3, 4, 5]
                 quote: false
       - name: product
+        description: Product ordered, from a closed list.
         data_tests:
+          - not_null
           - accepted_values:
               arguments:
                 values: ["bread", "brioche", "cookie", "croissant", "donut", "drink"]
