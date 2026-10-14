@@ -8,3 +8,5 @@ init.sql
 target/
 dbt_packages/
 logs/
+# dbt seeds are reference data versioned with the project
+!lab_medallion/seeds/*.csv
