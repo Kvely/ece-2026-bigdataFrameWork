@@ -6,3 +6,14 @@ seeds:
         data_tests:
           - unique
           - not_null
+
+  - name: state_zip_prefixes
+    description: Ranges of the first 3 digits of the ZIP codes of each state (USPS ZIP Code prefixes).
+    columns:
+      - name: state
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('states')
+                field: code
