@@ -1,0 +1,8 @@
+seeds:
+  - name: states
+    description: Two letters codes of the US states, territories and military regions (USPS).
+    columns:
+      - name: code
+        data_tests:
+          - unique
+          - not_null
